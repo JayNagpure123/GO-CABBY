@@ -1,0 +1,49 @@
+.canvas {
+    background-image: url('../../../assets/images/sectionbg_side.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    top:0;
+    position: sticky;
+    z-index: 0;
+}
+ 
+.heading {
+    font-weight: 800;
+}
+.textContainer {
+    width: 100%;
+}
+.body {
+    max-width: 300px;
+    margin: 30px;
+    line-height: 2em;
+    letter-spacing: 1px;
+    text-align: justify;
+    font-size: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+.top {
+    float: right;
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+}
+ 
+.bottom{
+    float: left;
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+}
+ 
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

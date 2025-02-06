@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ 
+.homeContainer {
+    z-index: -1;
+    top: 0;
+    position: sticky;
+    min-height: calc(100vh - 70px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bg1 {
+    background-image: url('../../../assets/images/sectionbg-front.jpg');
+}
+.bg2 {
+    background-image: url('../../../assets/images/sectionbg_side.jpg');
+}
+.bg3 {
+    background-image: url('../../../assets/images/sectionbg-3.jpg');
+}
+.bg4 {
+    background-image: url('../../../assets/images/sectionbg-4.jpg');
+}
+.bg5 {
+    background-image: url('../../../assets/images/sectionbg-5.jpg');
+}
+ 
+.heading {
+    font-weight: 800;
+    font-size: 140px;
+}
+ 
+.subHeading {
+    font-size: 24px;
+}

@@ -1,0 +1,17 @@
+.table-custom {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-custom td, .table-custom th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .table-custom button {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+  }
