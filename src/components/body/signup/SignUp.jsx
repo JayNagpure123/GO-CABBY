@@ -3,13 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import ApiService from "../../../services/ApiService";
 import MotoristDetails from "./MotoristDetails";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import styles from './signup.module.css'
 
 const SignUp = () => {
-  const path = useNavigate();
-
   const [companies, setCompanies] = useState([]);
   const [motorist, setMotorist] = useState(false);
   const [motoristDetails, setMotoristDetails] = useState({
@@ -18,7 +15,7 @@ const SignUp = () => {
     rta: "",
     allowedVehicles: ""
   });
-  const [motoristError, setMotoristError] = useState("");
+  const [motoristError, setMotoristError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
@@ -63,12 +60,13 @@ const SignUp = () => {
         const { licenseNo, expirationDate, rta, allowedVehicles } = motoristDetails;
         if (!licenseNo || !expirationDate || !rta || !allowedVehicles) 
         {
-          setMotoristError("All motorist details are required.");
+          setMotoristError(true);
           return;
         }
       }
 
       try {
+        setErrorMessage("");
         if (!motorist) {
           try{
           await ApiService.addRider({
@@ -83,6 +81,7 @@ const SignUp = () => {
           });
           await ApiService.register({ username: values.username, password: values.password, roles: "RIDER" });
             
+          setMotoristError(false);
           toast.success("Register Successfull as Rider", {position: "top-center"});
         }
               catch(error)
@@ -104,6 +103,7 @@ const SignUp = () => {
           }, motoristDetails);
           await ApiService.register({ username: values.username, password: values.password, roles: "MOTORIST" });
             
+          setMotoristError(false);
           toast.success("Register Successfull as Motorist", {position: "top-center"});
         }
             catch(error)
@@ -281,9 +281,11 @@ const SignUp = () => {
                         </div>
                       </div>
 
-                      {motoristError && <div className="alert alert-danger text-center mt-3" role="alert">
-                            {motoristError}
-                      </div>}
+                      {motoristError && (
+                        <div className="alert alert-danger text-center mt-3" role="alert">
+                          All motorist details are required.
+                        </div>
+                      )}
 
                       {motorist && (
                         <>

@@ -10,7 +10,7 @@ import ApplicationRequestListComponent from "./components/PendingApplications/Ap
 import Home from "./components/body/home/Home";
 import AboutUs from "./components/body/aboutUs/AboutUs";
 import FAQ from "./components/body/faq/FAQ";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/protect/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 
 function App() {

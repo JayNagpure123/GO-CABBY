@@ -34,7 +34,8 @@ const NavigationBar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: '#000000' }}>
         <div className="container-fluid">
         <a className="navbar-brand" onClick={() => navigate("/home")}>
-          <img src="/src/assets/images/logo.png" alt="GO CABBY" style={{ height: '40px' }} />
+          {/* <img src="/src/assets/images/logo.png" alt="GO CABBY" style={{ height: '40px' }} /> */}
+          GO CABBY 
         </a>
 
           <button

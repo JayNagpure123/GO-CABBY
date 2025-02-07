@@ -35,10 +35,10 @@ const Login = () => {
   
         if (role === "MOTORIST" || role === "RIDER") {
           navigate("/home");
-          toast.success("You have successfully logged in!", { position: "top-center" });
+          toast.success("You have successfully logged in!", { position: "top-center", theme: "dark" });
         } else if (role === "SECURITYHEAD") {
           navigate("/applications");
-          toast.success("Security Head has successfully logged in!", { position: "top-center" });
+          toast.success("Security Head has successfully logged in!", { position: "top-center"});
         }
   
       } catch (error) {

@@ -57,6 +57,7 @@ const ApplicationRequestListComponent = () => {
             <th>Company ID</th>
             <th>Designation</th>
             <th>Role</th>
+            <th>Application Status</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -68,6 +69,7 @@ const ApplicationRequestListComponent = () => {
               <td>{application.companyId}</td>
               <td>{application.designation}</td>
               <td>{application.role}</td>
+              <td>{application.applicationStatus}</td>
               <td>
                 <button
                   className="btn btn-info"
